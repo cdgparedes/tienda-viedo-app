@@ -1,0 +1,8 @@
+.footer {
+position: absolute;
+bottom: 0px; /* esto es para dejar el pie de página al fondo*/
+height: 60px;
+width: 100%;
+
+
+}
