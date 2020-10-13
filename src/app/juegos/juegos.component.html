@@ -1,0 +1,70 @@
+<div class="card border-primary mb-3" >
+    <div class="card-header">Juegos</div>
+    <div class="card-body text-primary">
+        <h5 class="card-title">Liatado de Juegos</h5>
+        <div class="my-2 text-left">
+            <button class="btn btn-rounded btn-primary" 
+                    type="button" 
+                    [routerLink]="['/juegos/form']"
+            >Crear Cliente
+            </button>
+        </div>
+        <div *ngIf="juegos?.length == 0" class="alert alert-info">
+            No hay registros en Base de Datos
+        </div >
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    
+                    <th>Nombre Juego</th>
+                    <th>Titulo</th>
+                    <th>Director</th>
+                    <th>Estado</th>
+                    <th>Protagonista</th>                    
+                    <th>Productor</th>
+                   <!-- <th>Marca</th>
+                    <th>Año</th>-->
+                    <th>Tecnología</th>
+                    <th>Precio</th>
+                    <th>Fecha Alquiler</th>
+                    <th>Fecha Entrega</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let juego of juegos">
+                    <td>{{ juego.nombreJuego}}</td>
+                    <td>{{ juego.titulo}}</td>
+                    <td>{{ juego.director}}</td>
+                    <td>{{ juego.estado}}</td>
+                    <td>{{ juego.protagonista}}</td>
+                    <td>{{ juego.productor}}</td>
+                    <!--<td>{{ juego.marca}}</td>
+                    <td>{{ juego.ano}}</td>-->
+                    <td>{{ juego.tecnologia}}</td>
+                    <td>{{ juego.precio}}</td>
+                    <td>{{ juego.fechaAlquiler}}</td>
+                    <td>{{ juego.fechaEntrega}}</td>
+                    <td>
+                        <button type="button" 
+                                name="editar" 
+                                [routerLink]="['/juegos/form', juego.idJuego]" 
+                                class="btn btn-primary ten-sm"
+                            >Editar
+                        </button>
+                    </td>
+                    <td>
+                        <button type="button" 
+                                name="eliminar" 
+                               (click)='delete(juego)' 
+                                class="btn btn-danger btn-sm"
+                            >Eliminar
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

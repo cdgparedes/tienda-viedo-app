@@ -1,0 +1,177 @@
+<div class="card bg-dark text-white">
+    <div  class="card-header">{{titulo}}</div>
+    <div  class="card-body">
+        <form >
+            <div class="form-group row">
+              <label for="nombreJuego"  class="col-form-label  col-sm-2">Nombre</label>
+              <div class="col-sm-6">
+                  <input type="text"  
+                         id="nombreJuego" 
+                         class="form-control" 
+                         [(ngModel)]="juego.nombreJuego" 
+                         name="nombreJuego"
+                    >
+              </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="director"  class="col-form-label  col-sm-2">Director</label>
+                <div class="col-sm-6">
+                    <input type="text" 
+                           name="director"
+                           id="director" 
+                           class="form-control" 
+                           [(ngModel)]="juego.director" 
+                           
+                    >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="titulo"  class="col-form-label  col-sm-2">Título</label>
+                <div class="col-sm-6">
+                    <input type="text" 
+                           name="" 
+                           id="" 
+                           class="form-control" 
+                           [(ngModel)]="juego.titulo" 
+                           name="titulo"
+                    >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="estado"  class="col-form-label  col-sm-2">Estado</label>
+                <div class="col-sm-6">
+                    <input type="text" 
+                           name="" 
+                           id="" 
+                           class="form-control" 
+                           [(ngModel)]="juego.estado" 
+                           name="estado"
+                    >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="protagonista"  class="col-form-label  col-sm-2">Protagonista</label>
+                <div class="col-sm-6">
+                    <input type="text" 
+                           name="" 
+                           id="" 
+                           class="form-control" 
+                           [(ngModel)]="juego.protagonista" 
+                           name="protagonista"
+                    >
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="productor"  class="col-form-label  col-sm-2">productor</label>
+                <div class="col-sm-6">
+                    <input type="text" 
+                           name="" 
+                           id="" 
+                           class="form-control" 
+                           [(ngModel)]="juego.productor" 
+                           name="productor"
+                    >
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="marca"  class="col-form-label  col-sm-2">marca</label>
+                <div class="col-sm-6">
+                    <input type="text" 
+                           name="marca" 
+                           id="marca" 
+                           class="form-control" 
+                           [(ngModel)]="juego.marca" 
+                           name="marca"
+                    >
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="ano"  class="col-form-label  col-sm-2">Año</label>
+                <div class="col-sm-6">
+                    <input type="text" 
+                           name="ano" 
+                           id="ano" 
+                           class="form-control" 
+                           [(ngModel)]="juego.ano" 
+                           name="ano"
+                    >
+               </div>
+            </div>
+            <div class="form-group row">
+                <label for="tecnologia"  class="col-form-label  col-sm-2">tecnologia</label>
+                <div class="col-sm-6">
+                    <input type="text" 
+                           name="tecnologia" 
+                           id="tecnologia" 
+                           class="form-control" 
+                           [(ngModel)]="juego.tecnologia" 
+                           name="tecnologia"
+                    >
+               </div>
+            </div>
+            <div class="form-group row">
+                <label for="precio"  class="col-form-label  col-sm-2">Precio</label>
+                <div class="col-sm-6">
+                    <input type="text" 
+                           name="precio" 
+                           id="precio" 
+                           class="form-control" 
+                           [(ngModel)]="juego.precio" 
+                           name="precio"
+                    >
+               </div>
+            </div>
+            <div class="form-group row">
+                <label for="fechaAlquiler"  class="col-form-label  col-sm-2">Fecha de alquiler</label>
+                <div class="col-sm-6">
+                    <input type="text" 
+                           name="fechaAlquiler" 
+                           id="fechaAlquiler" 
+                           class="form-control" 
+                           [(ngModel)]="juego.fechaAlquiler" 
+                           name="fechaAlquiler"
+                    >
+               </div>
+            </div>
+            <div class="form-group row">
+                <label for="fechaEntrega"  class="col-form-label  col-sm-2">Fecha de entrega</label>
+                <div class="col-sm-6">
+                    <input type="text" 
+                           name="fechaEntrega" 
+                           id="fechaEntrega" 
+                           class="form-control" 
+                           [(ngModel)]="juego.fechaEntrega" 
+                           name="fechaEntrega"
+                    >
+               </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <button class="btn btn-primary"
+                            role="button" 
+                            (click)= "create()" 
+                            *ngIf="!juego.idCliente else elseBlock"
+                        >Crear
+                    </button>
+                    <ng-template #elseBlock>
+                        <button class="btn btn-primary"
+                            role="button" 
+                            (click)= "update()" 
+                        >Editar
+                        </button>
+                    </ng-template>
+
+
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+

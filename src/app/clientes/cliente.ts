@@ -1,7 +1,9 @@
 export class Cliente {
-    id: number;
-    nombre: string;
-    apellido: string;
-    createAt: string;
+    idCliente: number;
+    documento: string;
+    edad: any;
+    estado: string;
+    nombreCliente: string;
     email: string;
+    fechaRegistro: Date;
 }

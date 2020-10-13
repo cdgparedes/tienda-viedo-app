@@ -1,7 +1,7 @@
 import { Cliente } from './cliente';
 
-export const CLIENTES: Cliente[] = [
-    {
+export const CLIENTES: Cliente[] = [ //Exportamos la variable la constante CLIENTES
+    /*{
       id: 1,
       nombre: 'Cesar Dubiel',
       apellido: 'Grajales Paredes',
@@ -28,5 +28,5 @@ export const CLIENTES: Cliente[] = [
       apellido: 'Ramirez Chujfi',
       email: 'jarchujfi@gmail.com',
       createAt: '2020-06-06'
-    }
+    }*/
   ];
