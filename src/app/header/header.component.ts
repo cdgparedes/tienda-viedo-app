@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
 })
 
 export class HeaderComponent {
-    title = 'App Angular ';
+    title = 'Tienda video Juegos ';
 }

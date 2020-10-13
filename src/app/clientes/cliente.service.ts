@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Cliente } from './cliente';
-import { CLIENTES } from './clientes.json';
 import { Observable, of, throwError} from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import swal from 'sweetalert2';
@@ -23,7 +22,6 @@ export class ClienteService {
   constructor(private http: HttpClient, private router: Router) { }
 
   getClientes(): Observable<Cliente[]> {
-    // return this.http.get<Cliente[]>(this.urlEndpoint);
     return this.http.get<Cliente[]>(this.urlEndpoint).pipe(
       map( (response) => response as Cliente[])
     );
